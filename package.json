@@ -22,11 +22,20 @@
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
+    "express": "^4.14.0",
     "jquery": "^3.0.0",
     "material-ui": "^0.15.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-tap-event-plugin": "^1.0.0",
     "reflux": "^0.4.1"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   }
 }
