@@ -16,4 +16,37 @@ gulp.task('dist', function() {
     .pipe(gulp.dest('dist/src/server'))
 })
 
-gulp.task('default', ['dist'])
+function compile(watch) {
+  var bundle = browserify('./src/client/app.js')
+
+  if (watch) {
+    bundle = watchify(bundle)
+    bundle.on('update', function() {
+      console.log('--> Bundling...')
+      rebundle()
+    })
+  }
+
+  function rebundle() {
+
+    bundle
+      .transform(babelify, { presets: ['es2015', 'react'] })
+      .bundle()
+      .on('error', function(error) { console.log(error); this.emit('end') })
+      .pipe(source('app.js'))
+      .pipe(rename('build.js'))
+      .pipe(gulp.dest('public'))
+  }
+
+  rebundle()
+}
+
+gulp.task('build', function() {
+  return compile()
+})
+
+gulp.task('watch', function() {
+  return compile(true)
+})
+
+gulp.task('default', ['dist', 'build'])
