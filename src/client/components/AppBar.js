@@ -5,11 +5,11 @@ import ActionHome from 'material-ui/svg-icons/action/home';
 import FontIcon from 'material-ui/FontIcon';
 import {blue500, red500, greenA200} from 'material-ui/styles/colors';
 
-const MyAwesomeReactComponent = () => (
+const AppBarComponent = () => (
   <AppBar 
     title="Dead Line App"
     iconElementRight={<IconButton iconClassName="material-icons">person</IconButton>}
   />
 
 );
-export default MyAwesomeReactComponent;
+export default AppBarComponent;
