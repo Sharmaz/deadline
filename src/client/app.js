@@ -5,24 +5,16 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBarComponent from './components/AppBar';
 import CardTime from './components/Card';
 
-const AppBar = () => (
+const App = () => (
   <MuiThemeProvider muiTheme={getMuiTheme()}>
+    <div>
     <AppBarComponent />
-  </MuiThemeProvider>
-);
-
-ReactDOM.render(
-  <AppBar />,
-  document.getElementById('container')
-);
-
-const Card = () => (
-  <MuiThemeProvider muiTheme={getMuiTheme()}>
     <CardTime />
+    </div>
   </MuiThemeProvider>
 );
 
 ReactDOM.render(
-  <Card />,
-  document.getElementById('card')
+  <App />,
+  document.getElementById('container')
 );

@@ -8,7 +8,7 @@ import {blue500, red500, greenA200} from 'material-ui/styles/colors';
 const AppBarComponent = () => (
   <AppBar 
     title="Dead Line App"
-    iconElementRight={<IconButton iconClassName="material-icons">person</IconButton>}
+    iconElementRight={<IconButton iconClassName="material-icons">add</IconButton>}
   />
 
 );

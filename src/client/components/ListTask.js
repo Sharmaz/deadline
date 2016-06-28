@@ -10,18 +10,16 @@ import ActionInfo from 'material-ui/svg-icons/action/info';
 const ListTask = () => (
   <div>
     <List>
-      <ListItem primaryText="Inbox"/>
-      <ListItem primaryText="Starred"/>
-      <ListItem primaryText="Sent mail"/>
-      <ListItem primaryText="Drafts"/>
-      <ListItem primaryText="Inbox"/>
-    </List>
-    <Divider />
-    <List>
-      <ListItem primaryText="All mail"/>
-      <ListItem primaryText="Trash"/>
-      <ListItem primaryText="Spam"/>
-      <ListItem primaryText="Follow up"/>
+      <Divider />
+      <ListItem primaryText="Winter is comming"/>
+      <Divider />
+      <ListItem primaryText="Conquest Westeros"/>
+      <Divider />
+      <ListItem primaryText="Fly with dragons"/>
+      <Divider />
+      <ListItem primaryText="Run with wolfs"/>
+      <Divider />
+      <ListItem primaryText="Slay the mad king"/>
     </List>
   </div>
 );
