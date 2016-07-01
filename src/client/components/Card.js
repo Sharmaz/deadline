@@ -9,7 +9,7 @@ const CardTime = () => (
   <Card>
     <CardMedia>
       <Clock />
-      <img src="http://lorempixel.com/600/337/nature/" />
+      <img className="blurry" src="http://lorempixel.com/600/337/nature/" />
     </CardMedia>
     <CardText>
       <ListTask />

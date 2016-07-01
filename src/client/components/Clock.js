@@ -5,19 +5,19 @@ export default class Clock extends React.Component{
     return <div id="clockwork" className="countdown"> 
     <div>
       <span className="days"></span>
-      <div className="smalltext">Days</div>
+      <div className="smalltext">Días</div>
     </div>
     <div>
       <span className="hours"></span>
-      <div className="smalltext">Hours</div>
+      <div className="smalltext">Horas</div>
     </div>
     <div>
       <span className="minutes"></span>
-      <div className="smalltext">Minutes</div>
+      <div className="smalltext">Minutos</div>
     </div>
     <div>
       <span className="seconds"></span>
-      <div className="smalltext">Seconds</div>
+      <div className="smalltext">Segundos</div>
     </div>
     </div>
   }

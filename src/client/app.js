@@ -1,3 +1,5 @@
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin()
 import React from 'react'
 import ReactDOM from 'react-dom'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
@@ -58,5 +60,28 @@ function initializeClock(id, endtime) {
   let timeinterval = setInterval(updateClock, 1000)
 }
 
-let deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000)
+let deadline = '2016-07-03 12:00:00'
 initializeClock('clockwork', deadline)
+
+let deadlines = [
+  {
+    title: 'Winter is comming',
+    date: '2016-07-03 12:00:00'
+  },
+  {
+    title: 'Conquest Westeros',
+    date: '2022-12-24'
+  },
+  {
+    title: 'Fly with dragons',
+    date: '2022-12-24'
+  },
+  {
+    title: 'Run with wolfs',
+    date: '2022-12-24'
+  },
+  {
+    title: 'Slay the mad king',
+    date: '2022-12-24'
+  }
+]
