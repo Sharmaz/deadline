@@ -6,6 +6,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBarComponent from './components/AppBar'
 import CardTime from './components/Card'
+import $ from 'jquery'
 
 const App = () => (
   <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -60,28 +61,17 @@ function initializeClock(id, endtime) {
   let timeinterval = setInterval(updateClock, 1000)
 }
 
-let deadline = '2016-07-03 12:00:00'
+let deadline = '2017-04-13 12:00:00'
 initializeClock('clockwork', deadline)
 
-let deadlines = [
-  {
-    title: 'Winter is comming',
-    date: '2016-07-03 12:00:00'
-  },
-  {
-    title: 'Conquest Westeros',
-    date: '2022-12-24'
-  },
-  {
-    title: 'Fly with dragons',
-    date: '2022-12-24'
-  },
-  {
-    title: 'Run with wolfs',
-    date: '2022-12-24'
-  },
-  {
-    title: 'Slay the mad king',
-    date: '2022-12-24'
-  }
-]
+
+function loadDeadlines(ctx, next) {
+  request.get('/api/deadline')
+  .end( (err, res) => {
+    if (err) return console.log(err)
+
+    ctx.deadlines = res.body
+    next()
+
+})
+}

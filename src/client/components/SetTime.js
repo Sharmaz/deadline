@@ -3,8 +3,9 @@ import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
 import DatePicker from 'material-ui/DatePicker'
-import TimePicker from 'material-ui/TimePicker';
+import TimePicker from 'material-ui/TimePicker'
 import IconButton from 'material-ui/IconButton'
+import TextField from 'material-ui/TextField'
 
 
 export default class SetTime extends React.Component {
@@ -43,7 +44,10 @@ render() {
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-          Elige la fecha y hora limite de tu proyecto.
+          Escribe el nombre de tu deadline.
+          <TextField hintText="Nombre"/>
+          <br />
+          Elige la fecha y hora limite.
           <DatePicker hintText="Fecha" />
           <TimePicker hintText="Hora" />
         </Dialog>
